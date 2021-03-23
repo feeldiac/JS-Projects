@@ -15,6 +15,10 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
+    width: 30%;
+    height: 8rem;
+    margin: 1rem 35%;
+    border: 1px solid #000;
 }
 
 .color-div {
