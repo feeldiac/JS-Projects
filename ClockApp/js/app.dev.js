@@ -1,3 +1,5 @@
+const reloj = document.querySelector(".reloj");
+
 const getHora = () => {
     const fecha = new Date();
     const tiempo = {
@@ -6,10 +8,11 @@ const getHora = () => {
         segundos: fecha.getSeconds() 
     };
     
-    const ahora = `${tiempo.hora} : ${tiempo.minutos} : ${tiempo.segundos}`
-    console.log(ahora);
-
-    document.querySelector(".reloj").innerHTML = ahora;
+    reloj.innerHTML = `${tiempo.hora} : ${tiempo.minutos} : ${tiempo.segundos}`; 
 }
 
-getHora();
+// setTimeout((a = 3, b = 5) => console.log( a + b), 3000);
+
+
+// Dejarlo sin paréntesis para que itere
+setInterval(getHora, 1000);
