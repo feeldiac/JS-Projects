@@ -16,12 +16,30 @@
   <body>
     <h2>Paleta de colores</h2>
 
-    <div class="salida" id="salida">#ffffff</div>
+    <div class="container">
+      <div class="info-container">
+        <div class="angle-container">
+          <div class="angle">angle</div>
+        </div>
 
-    <div class="color-div">
-      <input type="color" id="color" value="#ffffff" />
+        <div class="color-container">
+          <div class="color-div">
+            <div class="salida" id="salida">#ffffff</div>
+            <input type="color" class="color" id="color" value="#ffffff" />
+          </div>
+          <div class="color-div">
+            <div class="salida" id="salida2">#ffffff</div>
+            <input type="color" class="color" id="color2" value="#ffffff" />
+          </div>
+        </div>
+      </div>
+
+      <div class="msg-container">
+        <button id="btn">Show Gradient</button>
+        <div class="msg" id="msg">Background:</div>
+      </div>
     </div>
 
-    <script src="./js/color.bundle.js"></script>
+    <script src="./js/color.js"></script>
   </body>
 </html>
