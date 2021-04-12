@@ -20,7 +20,14 @@
       <div class="info-container">
         <div class="angle-container">
           <p>Select the angle for the grandient (default = 0 deg)</p>
-          <input type="number" class="angle" id="angle" value="0" />
+          <input
+            type="range"
+            min="0"
+            max="360"
+            class="angle"
+            id="angle"
+            value="0"
+          />
         </div>
 
         <div class="color-container">
@@ -28,15 +35,17 @@
             <div class="salida" id="salida">#ffffff</div>
             <input type="color" class="color" id="color" value="#ffffff" />
           </div>
+          <input type="number" id="stop1" />
           <div class="color-div">
             <div class="salida" id="salida2">#ffffff</div>
             <input type="color" class="color" id="color2" value="#ffffff" />
           </div>
+          <input type="number" id="stop2" />
         </div>
       </div>
 
       <div class="msg-container">
-        <button id="btn">Show Gradient</button>
+        <button id="btn" type="submit">Show Gradient</button>
         <div class="msg" id="msg">Background:</div>
       </div>
     </div>

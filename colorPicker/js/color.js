@@ -5,6 +5,8 @@ const salida2 = document.querySelector("#salida2");
 const angle = document.getElementById("angle");
 const msg = document.getElementById("msg");
 const btn = document.getElementById("btn");
+const stop1 = document.getElementById("stop1");
+const stop2 = document.getElementById("stop2");
 
 //Reacciona a los cambios de color en tiempo real
 color.addEventListener("input", () => {
@@ -21,8 +23,9 @@ color2.addEventListener("input", () => {
     salida2.style.color = "#fff";
 })
 
+
 btn.addEventListener("click", function () {
-    document.body.style.background = `linear-gradient(${angle.value}deg, ${color.value}, ${color2.value})`;
+    document.body.style.background = `linear-gradient(${angle.value}deg, ${color.value} ${stop1.value}%, ${color2.value} ${stop2.value}%)`;
     msg.textContent = document.body.style.background;
   });
 
