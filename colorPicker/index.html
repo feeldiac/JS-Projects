@@ -14,12 +14,11 @@
     <title>ColorPicker</title>
   </head>
   <body>
-    <h2>Paleta de colores</h2>
-
     <div class="container">
       <div class="info-container">
         <div class="angle-container">
-          <p>Select the angle for the grandient (default = 0 deg)</p>
+          <div class="show-angle" id="show-angle">0 deg</div>
+          <label for="angle">Select an angle</label>
           <input
             type="range"
             min="0"
@@ -31,22 +30,58 @@
         </div>
 
         <div class="color-container">
-          <div class="color-div">
-            <div class="salida" id="salida">#ffffff</div>
-            <input type="color" class="color" id="color" value="#ffffff" />
+          <div class="color-card">
+            <div class="color-options">
+              <label for="salida" class="color-label">Select a color</label>
+              <div class="color-div">
+                <div class="salida" id="salida">#ffffff</div>
+                <input type="color" class="color" id="color" value="#ffffff" />
+              </div>
+            </div>
+
+            <div class="number-options">
+              <label for="stop1" class="number-label">Select a stop</label>
+              <input type="number" id="stop1" min="0" max="100" value="0" />
+            </div>
           </div>
-          <input type="number" id="stop1" />
-          <div class="color-div">
-            <div class="salida" id="salida2">#ffffff</div>
-            <input type="color" class="color" id="color2" value="#ffffff" />
+
+          <div class="color-card">
+            <div class="color-options">
+              <label for="salida2" class="color-label">Select a color</label>
+              <div class="color-div">
+                <div class="salida" id="salida2">#ffffff</div>
+                <input type="color" class="color" id="color2" value="#ffffff" />
+              </div>
+            </div>
+
+            <div class="number-options">
+              <label for="stop2" class="number-label">Select a stop</label>
+              <input type="number" id="stop2" min="0" max="100" value="100" />
+            </div>
           </div>
-          <input type="number" id="stop2" />
+
+          <!-- <div class="color-card color-card__3">
+            <div class="color-options">
+              <label for="salida2" class="color-label">Select a color</label>
+              <div class="color-div">
+                <div class="salida" id="salida2">#ffffff</div>
+                <input type="color" class="color" id="color2" value="#ffffff" />
+              </div>
+            </div>
+
+            <div class="number-options">
+              <label for="stop2" class="number-label">Select a stop</label>
+              <input type="number" id="stop2" min="0" max="100" value="100" />
+            </div>
+          </div> -->
         </div>
       </div>
 
       <div class="msg-container">
-        <button id="btn" type="submit">Show Gradient</button>
-        <div class="msg" id="msg">Background:</div>
+        <span>background-image:</span>
+        <div class="msg" id="msg">
+          linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)
+        </div>
       </div>
     </div>
 
