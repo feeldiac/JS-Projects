@@ -32,19 +32,19 @@ color2.addEventListener("input", () => {
 })
 
 angle.addEventListener("input", () => {
-    if (angle.value >= 0 && angle.value < 60) {
-        show_angle.classList.add("small");
-        show_angle.classList.remove("medium");
-        show_angle.classList.remove("large");
-    } else if (angle.value > 60 && angle.value < 120) {
-        show_angle.classList.add("medium");
-        show_angle.classList.remove("small");
-        show_angle.classList.remove("large");
-    } else {
-            show_angle.classList.add("large");
-            show_angle.classList.remove("medium");
-            show_angle.classList.remove("small");
-    }
+    // if (angle.value >= 0 && angle.value < 60) {
+    //     show_angle.classList.add("small");
+    //     show_angle.classList.remove("medium");
+    //     show_angle.classList.remove("large");
+    // } else if (angle.value > 60 && angle.value < 120) {
+    //     show_angle.classList.add("medium");
+    //     show_angle.classList.remove("small");
+    //     show_angle.classList.remove("large");
+    // } else {
+    //         show_angle.classList.add("large");
+    //         show_angle.classList.remove("medium");
+    //         show_angle.classList.remove("small");
+    // }
 
     show_angle.innerHTML = angle.value;
     document.body.style.background = `linear-gradient(${angle.value}deg, ${color.value} ${stop1.value}%, ${color2.value} ${stop2.value}%)`;

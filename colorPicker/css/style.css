@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-input[type="number"] {
-  width: 40px;
-}
-
 html,
 body {
   margin: 0;
@@ -22,6 +18,7 @@ h1 {
   color: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 15px;
 }
 
 h2 {
@@ -30,6 +27,8 @@ h2 {
 
 label {
   font-size: 0.8rem;
+  font-weight: 700;
+  color: #3d4853;
 }
 
 .container {
@@ -40,27 +39,38 @@ label {
 .info-container {
   display: flex;
   flex-direction: column;
-  /* align-items: space-evenly; */
   justify-content: space-evenly;
-  /* border: 3px solid black; */
   width: fit-content;
   height: 100vh;
-  background-color: rgba(239, 239, 239);
-  /* grid-area: sidebar; */
+  background-color: rgb(255, 255, 255);
   padding: 25px;
-  /* border-radius: 12px; */
-  margin-right: 0;
-  /* position: fixed;
-  left: 0; */
+  border-right: 1px solid rgb(239, 239, 239);
 }
 
 .angle-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px solid black;
+  /* border: 1px solid black;
+  border-radius: 12px; */
+  padding: 15px;
   /* height: 158px; */
+}
+
+.angle-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.angle-details span {
+  color: #3d4853;
+}
+
+input[type="range"] {
+  width: 100%;
 }
 
 .small {
@@ -84,8 +94,8 @@ label {
 }
 
 .color-card {
-  border: 1px solid black;
-  border-radius: 8px;
+  /* border: 1px solid black; */
+  border-radius: 12px;
   /* display: flex; */
   /* flex-direction: column;
   align-items: baseline;
@@ -93,13 +103,14 @@ label {
 }
 
 .color-options {
-  border: 1px solid black;
+  /* border: 1px solid rgb(252, 23, 23); */
+  height: 80px;
 }
 
 .color-div {
   margin: 1rem;
-  width: 100px;
-  height: 3rem;
+  width: 90px;
+  height: 45px;
   position: relative;
   bottom: 10px;
 }
@@ -109,14 +120,10 @@ label {
   height: 100%;
 }
 
-.color-label {
-  margin-bottom: 5px;
-}
-
 .salida {
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  font-weight: 300;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -124,13 +131,52 @@ label {
   transform: translate(-50%, -50%);
 }
 
-.number-label,
-.color-label {
-  padding-left: 15px;
-}
-
 .number-options {
   /* border: 1px solid black; */
+}
+
+.number-label,
+.color-label {
+  margin-left: 15px;
+}
+
+input[type="number"] {
+  width: 40px;
+  text-align: center;
+  margin-left: 16px;
+  color: #3d4853;
+}
+
+button {
+  color: rgb(239, 239, 239);
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 2rem;
+  border-radius: 12px;
+  /* border: 1px solid black; */
+}
+
+.btn-grad {
+  background-image: linear-gradient(60deg, #e21143, #ffb03a);
+}
+.btn-grad {
+  margin: 10px;
+  /* padding: 15px 45px; */
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  /* color: white; */
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #363e46;
+  text-decoration: none;
 }
 
 .msg-container {
@@ -142,6 +188,6 @@ label {
 
 .msg-border {
   text-align: center;
-  border: 1px groove white;
-  border-radius: 12px;
+  /* border: 1px groove white;
+  border-radius: 12px; */
 }

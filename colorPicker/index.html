@@ -54,12 +54,12 @@
         </div>
 
         <div class="angle-container">
-          <div>
+          <div class="angle-details">
+            <label for="angle">Angle</label>
             <span class="show-angle" id="show-angle">0</span>
-            <span class="small">deg</span>
+            <span>deg</span>
           </div>
 
-          <label for="angle">Select an angle</label>
           <input
             type="range"
             min="0"
@@ -70,14 +70,14 @@
           />
         </div>
 
-        <button>Copy CSS</button>
+        <button class="btn-grad">Copy CSS</button>
       </div>
 
       <div class="msg-container">
         <div class="msg-border">
           <span>background-image:</span>
           <span class="msg" id="msg">
-            linear-gradient (0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255)
+            linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255)
             100%)
           </span>
         </div>
