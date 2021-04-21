@@ -1,14 +1,14 @@
-const canvas = document.querySelector("#canvas");
+const element = document.querySelector("#canvas");
+const ctx = element.getContext("2d");
 
 const w = document.body.clientWidth;
 const h = document.body.clientHeight;
 
-canvas.width = w;
-canvas.height = h;
+element.width = w;
+element.height = h;
 
 const position = Array(300).join(0).split("");
 
-const ctx = canvas.getContext("2d");
 // Logica para rellenar de la Matrix
 
 const initMatrix = () => {
@@ -20,7 +20,7 @@ const initMatrix = () => {
 
   position.map((y, index) => {
     const text = String.fromCharCode(1e3 + Math.random() * 30);
-    const x = index * 15 + 15;
+    const x = index * 15;
 
     canvas.getContext("2d").fillText(text, x, y);
 
@@ -30,4 +30,4 @@ const initMatrix = () => {
   });
 };
 
-setInterval(initMatrix, 800);
+setInterval(initMatrix, 70);
