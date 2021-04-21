@@ -12,8 +12,15 @@ const ctx = canvas.getContext("2d");
 // Logica para rellenar de la Matrix
 
 const initMatrix = () => {
-  ctx.fillStyle = "#00FF00";
+  ctx.fillStyle = "rgba(0, 15, 2, 0.15)";
   ctx.fillRect(0, 0, w, h);
+
+  ctx.fillStyle = "#4caf50";
+  ctx.font = "11pt";
+
+  position.map((y, index) => {
+    const text = String.fromCharCode(1e3);
+  });
 };
 
-setInterval(initMatrix, 70);
+setInterval(initMatrix, 300);
